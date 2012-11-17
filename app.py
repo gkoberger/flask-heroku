@@ -1,3 +1,5 @@
+import os
+
 from flask import Flask, url_for, jsonify, request, redirect, current_app, make_response, render_template
 from flask.ext.sqlalchemy import SQLAlchemy
 from flask_heroku import Heroku
