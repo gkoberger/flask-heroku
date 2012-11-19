@@ -20,7 +20,12 @@ Install all requirements
 
     pip install -r requirements.txt
 
-Install and open [PosgressApp](http://postgresapp.com/)
+Install [PosgressApp](http://postgresapp.com/)
+
+Install all the node dependencies:
+
+    npm install -g uglify-js
+    npm install -g less
 
 Create the database
   
@@ -56,3 +61,9 @@ Set up Postgres
 
     heroku addons:add heroku-postgresql:dev
     heroku pg:promote HEROKU_POSTGRESQL_[GET_REST_FROM_OUTPUT_OF_ABOVE_COMMAND]
+
+TODO (So I don't forget)
+------------------------
+Push script:
+ * Compile assets
+ * Run migrations

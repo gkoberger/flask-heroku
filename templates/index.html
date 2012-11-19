@@ -3,8 +3,11 @@
   <head>
     <meta charset="utf-8" />
     <title>Boilerplate Flask app</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/normalize.css') }}" />
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}" />
+
+    {% assets "css_all" %}
+    <link rel="stylesheet" type="text/css" href="{{ ASSET_URL }}">
+    {% endassets %}
+
     <!--[if IE]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -17,7 +20,8 @@
     {% block main %}
     {% endblock %}
 
-    <script src="{{ url_for('static', filename='js/lib/jquery.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    {% assets "js_all" %}
+    <script type="text/javascript" src="{{ ASSET_URL }}"></script>
+    {% endassets %}</script>
   </body>
 </html>

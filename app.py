@@ -3,6 +3,7 @@ import os
 from flask import Flask, url_for, jsonify, request, redirect, current_app, make_response, render_template
 from flask.ext.sqlalchemy import SQLAlchemy
 from flask_heroku import Heroku
+from flask.ext.assets import Environment, Bundle
 import wtforms as wtf
 
 app = Flask(__name__)
@@ -10,7 +11,22 @@ heroku = Heroku(app)
 
 app.config.from_envvar('APP_CONFIG')
 
+# Set up the database
 db = SQLAlchemy(app)
+
+# CSS/JS/etc assets
+assets = Environment(app)
+assets.url = 'static'
+
+assets.register('js_all',
+        'js/lib/*.js', 'js/*.js',
+        filters='uglifyjs', output='gen/js_all.min.js')
+
+assets.register('css_all',
+        'css/*.css',        
+        Bundle('css/*.less', filters='less'),
+        filters='cssmin',
+        output='gen/css_all.min.css')
 
 # Sample Model
 class SampleModel(db.Model):
