@@ -1,5 +1,8 @@
 This is a basic Flask project with all the fixins that's ready to be pushed to Heroku.
 
+I'll clean it up eventually, move things out of app.py and make a script for 
+initiating it. But this is a start, I suppose?
+
 LOCAL SETUP
 -----------
 (Soon I'll turn this into a script.. probably)
