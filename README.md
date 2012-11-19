@@ -3,6 +3,19 @@ This is a basic Flask project with all the fixins that's ready to be pushed to H
 I'll clean it up eventually, move things out of app.py and make a script for 
 initiating it. But this is a start, I suppose?
 
+WHAT THIS INCLUDES
+------------------
+
+ * Flask
+ * ["Real HTML5 Boilerplate"](http://csswizardry.com/2011/01/the-real-html5-boilerplate/)
+ * SQL Alchemy
+ * WTForms
+ * Webassets (compress assets, compile LESS, etc)
+ * Flask-Script
+ * Flask-Evolution (migrations)
+
+Everything is connected to Flask, and ready to be pushed to Heroku.
+
 LOCAL SETUP
 -----------
 (Soon I'll turn this into a script.. probably)
