@@ -6,6 +6,7 @@ initiating it. But this is a start, I suppose?
 LOCAL SETUP
 -----------
 (Soon I'll turn this into a script.. probably)
+(TODO: show difference between initial setup and anyone checking it out)
 
 Go to an empty folder
 
@@ -83,3 +84,4 @@ TODO (So I don't forget)
 Push script:
  * Compile assets
  * Run migrations
+
