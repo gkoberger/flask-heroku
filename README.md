@@ -40,6 +40,10 @@ Open `$VIRTUAL_ENV/bin/postactivate` and add the following:
     export APP_CONFIG='settings_local.cfg'
     export DATABASE_URL='postgresql://localhost/[DATABASE_NAME]'
 
+Set up migrations (we have to run it to create directories, etc):
+
+    python manage.py migrate run
+
 RUNNING IT
 ----------
 
@@ -48,6 +52,15 @@ RUNNING IT
 2. Open up Postgres.app
 
 3. Run `foreman start`
+
+CREATING AND RUNNING MIGRATIONS
+-------------------------------
+
+Create: `python manage.py migrate create`
+Run: `python manage.py migrate run`
+
+Redo: `python manage.py migrate redo`
+Undo: `python manage.py migrate undo`
 
 SETTING UP HEROKU
 -----------------

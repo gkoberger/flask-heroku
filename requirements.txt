@@ -11,3 +11,5 @@ wsgiref==0.1.2
 Flask-Assets==0.7
 webassets==0.8.dev
 cssmin==0.1.4
+Flask-Script==0.5.1
+flask-evolution==0.6
